@@ -1,0 +1,10 @@
+---
+- hosts: all
+  connection: local
+  tasks:
+    - name: append last execution to file
+      lineinfile:
+        line: "{{ ansible_date_time.time }}"
+        path: /tmp/last_execution.txt
+        insertafter: EOF
+...
