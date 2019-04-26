@@ -6,5 +6,6 @@
       lineinfile:
         line: "{{ ansible_date_time.time }}"
         path: /tmp/last_execution.txt
+        create: true
         insertafter: EOF
 ...
